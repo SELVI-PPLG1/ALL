@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELVI.J XPPLG1</title>
+</head>
+<body>
+    <script>
+        var pembeli = [
+            {
+                nama : "meida azmi",
+                barang : [
+                    {
+                        nama : "headset(50.000*1),kaos kaki(50.000*6)",
+                        total : "RP.100.000.00",
+                        potongan : "RP.5.000.00",
+                        bayar : "RP.95.000.00"
+                    }
+                ]
+            }
+        ]
+
+        for (let i = 0; i <pembeli.length; i++) {
+            document.write("nama pembeli : " + pembeli[i].nama + "<br />");
+
+            for (let a = 0; a < pembeli[i].barang.length; a++) {
+                document.write("nama barang : " +pembeli[i].barang[a].nama + "<br />");
+                document.write("total : "+pembeli[i].barang[a].total + "<br />");
+                document.write("potongan : "+pembeli[i].barang[a].potongan + "<br />");
+                document.write("bayar : "+pembeli[i].barang[a].bayar + "<br />");
+            }
+        }
+    </script>
+</body>
+</html>

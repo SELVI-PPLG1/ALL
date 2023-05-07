@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELVIJ.XPPLG1</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        h2,h4 {
+            margin: 0;
+        }
+        p#demo, #demo1 {
+            font-weight: bold;
+            vertical-align: middle;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h2> PROGRAM MENENTUKAN BILANGAN GANJIL DAN GENAP </h2>    
+    <h4> SELVIJ | 070922 | XPPLG1 </h4>
+    <br>
+<!--bilangan yang akan di cek-->    
+<p>
+    bilangan <input type="number" id="mynumber"
+    <button onclick="cek()">cek</button></p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+<script>
+//penghitungan dan hasil pengecekkan hasil modulo funcation//
+function cek() {
+    var bil= document.getElementById("mynumber").value
+    if (bil%2==0) {
+        document.getElementById("demo").innerText = "BILANGAN GENAP";
+    } else {
+        document.getElementById("demo").innerText = "BILANGAN GANJIL";
+    }
+//MENENTUKAN BILANGAN PRIMA//
+    var bil= document.getElementById("mynumber").value
+    let pembagi = 0;
+    for (let i=1; i<=bil; i++) {
+        if(bil%i==0) {
+        pembagi++    
+        }
+    } 
+        if  (pembagi==2) {
+        document.getElementById("demo1").innerText = "BILANGAN PRIMA"; 
+    }   else {
+        document.getElementById("demo1").innerText = "BUKAN PRIMA";
+    }
+}
+
+</script>
+</body>
+</html>
